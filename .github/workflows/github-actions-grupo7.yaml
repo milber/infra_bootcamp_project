@@ -19,7 +19,5 @@ jobs:
         run: aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo7 --region us-east-1
       - name: Get nodes
         run: kubectl get nodes
-      - name: Delete service
-        run: kubectl delete service todo-app-svc-7 -n grupo7
       - name: Create service
         run: kubectl apply -f service.yaml
