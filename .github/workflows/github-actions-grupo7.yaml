@@ -9,10 +9,6 @@ jobs:
   grupo7:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        - uses: actions/checkout@v4
-            with:
-            sparse-checkout: .
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
