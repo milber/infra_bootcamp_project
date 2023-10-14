@@ -60,3 +60,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+INFRA BOOT CAMP
+
+kubectl port-forward service/todo-app-svc-7 8080:3000 -n grupo7
+
+usar namespaces 
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+
+aws credentcials
+export AWS_ACCESS_KEY_ID= xxxxxxx
+export AWS_SECRET_ACCESS_KEY=
