@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone repositore 
-        uses: milber/clone-github-repo-action@v2.2
+        uses: https://github.com/milber/infra_bootcamp_project
         with:
           dept: 1
           branch: 'master'
