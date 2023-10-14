@@ -12,7 +12,7 @@ const data = {
       },
       "list-2": {
         id: "list-2",
-        title: "In Progress",
+        title: "In Progress Todo App",
         cards: [],
       },
       "list-3": {
