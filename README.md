@@ -74,3 +74,9 @@ kubectl apply -f service.yaml
 aws credentcials
 export AWS_ACCESS_KEY_ID= xxxxxxx
 export AWS_SECRET_ACCESS_KEY=
+
+
+Resources
+https://medium.com/swlh/official-aws-for-github-actions-21b4cb39b8d3
+https://github.com/marketplace/actions/replace-tokens
+
