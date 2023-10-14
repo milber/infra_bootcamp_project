@@ -5,5 +5,7 @@ on:
 
 name: infra-bootcamp
 
-job: 
-  - run: echo "testing ......" 
+job:
+  grupo7:
+    steps:
+      - run: echo "testing ......" 
