@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: todo-app
+ namespace: grupo7
+spec:
+ replicas: 3
+ selector:
+   matchLabels:
+     app: todo-app
+ template:
+   metadata:
+     labels:
+       app: todo-app
+   spec:
+     containers:
+       - name: todo-app
+         image: milbertc/todo-app
+         livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 20
+          periodSeconds: 3
+         ports:
+           - containerPort: 3000

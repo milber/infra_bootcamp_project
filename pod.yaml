@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: todo-app
+spec:
+ containers:
+ - name: tod0-app
+   image: milbertc/todo-app
+   ports:
+   - containerPort: 3000
