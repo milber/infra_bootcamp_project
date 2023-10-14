@@ -9,6 +9,8 @@ jobs:
   grupo7:
     runs-on: ubuntu-latest
     steps:
+      - name: clone 
+        run : git clone git@github.com:milber/infra_bootcamp_project.git
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
