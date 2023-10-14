@@ -15,3 +15,7 @@ jobs:
           aws-region: us-east-1
           aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
           aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+      - name: Remove services and deployment
+        run: |
+          kubectl delete service todo-app-svc-7 -n grupo7
+          kubectl apply -f service.yaml -n grupo7
