@@ -7,7 +7,7 @@ name: infra-bootcamp
 
 jobs:
   grupo7:
-    runs-on: milbertc/todo-app
+    runs-on: ubuntu-latest
     steps:
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
