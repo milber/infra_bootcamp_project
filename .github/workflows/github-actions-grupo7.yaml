@@ -13,6 +13,11 @@ jobs:
         uses: actions/checkout@v4
       - name: build
         run: docker build -t milbertc/todo-app .
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
