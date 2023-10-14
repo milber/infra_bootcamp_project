@@ -23,5 +23,9 @@ jobs:
         run: aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo7 --region us-east-1
       - name: Get nodes
         run: kubectl get nodes
+      - name: remove deployments
+        run: kubectl delete deployment todo-app -n grupo7
+      - name: apply deployments
+        run: kubectl apply -f deployment.yaml
      
       
