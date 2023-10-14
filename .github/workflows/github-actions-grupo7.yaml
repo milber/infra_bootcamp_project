@@ -4,3 +4,6 @@ on:
       - master
 
 name: infra-bootcamp
+
+job: 
+  - run: echo "testing ......" 
