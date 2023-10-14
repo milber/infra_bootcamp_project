@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone repositore 
-        uses: milber/infra-bootcamp
+        uses: milber/clone-github-repo-action@v2.2
         with:
           dept: 1
           branch: 'master'
           owner: 'milber'
-          repository: 'infra-bootcamp'
+          repository: 'infra-bootcamp-proyect'
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
