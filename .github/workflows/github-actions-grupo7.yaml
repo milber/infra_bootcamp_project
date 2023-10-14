@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v4
+      
       - name: build
         run: docker build -t milbertc/todo-app .
       - name: Login to Docker Hub
@@ -19,7 +20,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Dockder push
-        uses: docker/build-push-action@v5
+        uses: docker/push-action@v5
         with:
           push: true
           tags: milbertc/todo-app
