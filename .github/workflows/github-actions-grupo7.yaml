@@ -12,7 +12,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: build
-        run: docker build
+        run: docker build -t milbertc/todo-app .
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
