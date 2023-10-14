@@ -18,4 +18,3 @@ jobs:
       - name: Remove services and deployment
         run: |
           kubectl delete service todo-app-svc-7 -n grupo7
-          kubectl apply -f service.yaml -n grupo7
