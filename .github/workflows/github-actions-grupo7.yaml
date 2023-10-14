@@ -18,6 +18,11 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Dockder push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: milbertc/todo-app
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
