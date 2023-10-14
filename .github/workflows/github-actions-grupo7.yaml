@@ -9,13 +9,10 @@ jobs:
   grupo7:
     runs-on: ubuntu-latest
     steps:
-      - name: clone repositore 
-        uses: https://github.com/milber/infra_bootcamp_project@master
-        with:
-          dept: 1
-          branch: 'master'
-          owner: 'milber'
-          repository: 'infra-bootcamp-proyect'
+      - name: checkout
+        - uses: actions/checkout@v4
+            with:
+            sparse-checkout: .
       - name: Configure AWS credentinals
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -26,6 +23,5 @@ jobs:
         run: aws eks update-kubeconfig --name eks-grupo0 --alias eks-grupo7 --region us-east-1
       - name: Get nodes
         run: kubectl get nodes
-      - name: Delete service
-        run: kubectl delete service todo-app-svc-7 -n grupo7
+     
       
